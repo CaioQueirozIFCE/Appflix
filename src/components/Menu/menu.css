@@ -1,0 +1,72 @@
+.Menu{
+    width: 100%;
+    height: 94px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    padding:2% 5%;
+    background: var(--black);
+    border-bottom: 2px solid var(--primary);
+}
+
+.logo{
+    max-width: 168px;
+}
+@media (max-width: 800px){
+    .logo{
+        max-width: 130px;
+    }
+}
+.ButtonLink{
+    color: var(--grayMedium);
+    border: 1px solid var(--white);
+    padding: 16px 24px;
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    transition: 400ms opacity;
+}
+.ButtonLink:hover,
+.ButtonLink:focus{
+    opacity: .5;
+}
+.ButtonLinkResponsive{
+    display: none;
+}
+@media (max-width: 800px){
+    .ButtonLink{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border: none;
+        z-index: 100;
+    }
+    .Menu{
+        justify-content: center;
+
+    }
+    .ButtonLinkResponsive{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        background-color: var(--backend1);
+        width: 100%;
+        height: 54px;
+
+    }
+}
